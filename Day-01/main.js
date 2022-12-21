@@ -13,7 +13,7 @@ console.log("Age is " + age );
 
 
 let maritualStatus = isMarried;
-if (isMarried == true )
+if (isMarried == false )
     {console.log("Unmarried");}
 else
     {console.log("Married");}
