@@ -53,6 +53,16 @@ console.log(Math.max(25,7,1997,1,4,88,33));
 const randNumber = Math.random();
 console.log(randNumber);
 
-const randNumber1 = Math.floor(Math.random()*11);
+const randNumber1 = Math.floor(Math.random()*1);
 console.log(randNumber1);
+(
+console.log(Math.abs(-23)));
+console.log(Math.sqrt(64));
+console.log(Math.pow(5,6));
+console.log(Math.sin(180));
+
+//random number generator
+
+let number = Math.floor(Math.random()*11);
+console.log(number);
 
