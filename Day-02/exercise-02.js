@@ -89,3 +89,113 @@ console.log(quote);
 // "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
 let quote1 = "\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead\'"
 console.log(quote1);
+
+// Level-02
+// 2.2.3
+// Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+let num ='10'
+let numInt = parseInt(num);
+console.log(typeof(num));
+console.log(typeof(numInt));
+// 2.2.4
+// Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+let gravity = 9.8;
+console.log(parseFloat(gravity));
+console.log(Math.ceil(gravity));
+// 2.2.5
+// Check if 'on' is found in both python and jargon
+let str1 = 'python';
+let str2 = 'jargon';
+let test = str1.includes('on') && str2.includes('on');
+console.log(test);
+// 2.2.6
+// I hope this course is not full of jargon. Check if jargon is in the sentence.
+let sentence1 = 'I hope this course is not full of jargon';
+let test1 = sentence1.includes('jargon');
+console.log(test1);
+// 2.2.7
+// Generate a random number between 0 and 100 inclusively
+let random = Math.floor(Math.random() * 100);
+console.log(random);
+
+// 2.2.8
+// Generate a random number between 50 and 100 inclusively.
+let min = 50 ;
+let max = 100;
+let random2 = Math.floor(Math.random()*(100 - 50)+50);
+console.log(random2);
+// 2.2.9
+// Generate a random number between 0 and 255 inclusively.
+let random3 = Math.floor(Math.random() * 256);
+console.log(random3);
+// 2.2.10
+// Access the 'JavaScript' string characters using a random number.
+let string = 'JavaScript'
+let random4 = Math.floor(Math.random() * 10);
+console.log(random4);
+console.log(string.charAt(random4));
+// 2.2.11
+// Use console.log() and escape characters to print the following pattern.
+// 1 1 1 1 1
+// 2 1 2 4 8
+// 3 1 3 9 27
+// 4 1 4 16 64
+// 5 1 5 25 125
+console.log("1\t 1\t 1\t 1\t 1\t")
+console.log("2\t 1\t 2\t 4\t 8\t")
+console.log("3\t 1\t 3\t 9\t 27\t")
+console.log("4\t 1\t 4\t 16\t 64\t")
+console.log("5\t 1\t 5\t 25\t 125\t")
+// 2.2.12
+// Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let str5 = 'You cannot end a sentence with because because because is a conjunction';
+console.log(str5.substr(39,55));
+// Level-03
+// 2.3.1
+// 'Love is the best thing in this world. Some found their love and some are still looking for their love.' 
+let quote5 = 'love is the best thing in this world. Some found their love and some are still looking for their love';
+let word = "love";
+function occurrenceOfWord(quote5,word){
+    let x = quote5.split(" ");
+    let count = 0;
+    for(let i = 0 ; i < x.length ; i++ ){
+        if(word==x[i])
+           count++;
+    }
+return count;
+}
+console.log(occurrenceOfWord(quote5,word));
+// 2.3.2
+// Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let phrase = 'You cannot because end a sentence with  because is a conjunction';
+let pattern1 = /because/g
+count = phrase.match(pattern1);
+console.log(count.length);
+
+//2.3.3
+// Clean the following text and find the most frequent word (hint, use replace and regular expressions).
+
+const sentence3 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+let regEx1 = /\w+/gm;
+let cleansentence =sentence3.replace(/[^\w\s]|_/g, "");
+let words = cleansentence.split(/\s/);
+let wordFrequencies = new Map();
+words.forEach(function(word) {
+    if (!wordFrequencies.has(word))
+        wordFrequencies.set(word, 1);
+    else
+        wordFrequencies.set(word, wordFrequencies.get(word)+1);
+});
+let maxFrequency = Math.max(...wordFrequencies.values()); // Find max frequency of any word.
+let wordsMatchingMaxFrequency = Array.from(wordFrequencies.keys()).filter((word) => {
+    return wordFrequencies.get(word) === maxFrequency;
+});
+console.log(wordsMatchingMaxFrequency);
+
+// 2.4.4
+// Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let summary = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+let regEx = /\d+/g;
+let income = summary.match(regEx);
+let totalSalary = (parseInt(income[0])*12)+parseInt(income[1])+(parseInt(income[2])*12);
+console.log(totalSalary);
