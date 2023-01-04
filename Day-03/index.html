@@ -7,16 +7,22 @@
     <title>Test Alert</title>
 </head>
 <body>
+    <div id="area">-</div>
     <script>
-        alert('Welcome to 30 Days of Javascript');
-        confirm('Welcome to 30 Days of Javascript');
+        // alert('Welcome to 30 Days of Javascript');
+        // confirm('Welcome to 30 Days of Javascript');
 
-        let test = alert('Welcome to 30 Days of Javascript');
-        console.log(test);
+        // let test = alert('Welcome to 30 Days of Javascript');
+        // console.log(test);
         let now = new Date();
         console.log(now);
         console.log(now.getFullYear());
         console.log(now.getDate());
+
+let base = prompt("Enter the base: ");
+let height = prompt("Enter the heigt: ");
+let area = 0.5 * parseInt(base) * parseInt(height);
+console.log(area);
     </script>
 </body>
 </html>
