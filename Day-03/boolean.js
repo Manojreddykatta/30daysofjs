@@ -92,21 +92,19 @@ console.log('python'.length > 'dragon'.length)   // false
 //always use === unless you have a good reason to use ==
 
 // && ampersand operator example
-
-const check = 4 > 3 && 10 > 5         // true && true -> true
-const check1 = 4 > 3 && 10 < 5         // true && false -> false
-const check2 = 4 < 3 && 10 < 5         // false && false -> false
-
+console.log('Ampersand Operators');
+console.log(9>5 && 9>2);
+console.log(12<244 && 34==35 );
+console.log(1>45 && 14<=14);
 // || pipe or operator, example
-
-const check3 = 4 > 3 || 10 > 5         // true  || true -> true
-const check4 = 4 > 3 || 10 < 5         // true  || false -> true
-const check5 = 4 < 3 || 10 < 5         // false || false -> false
+console.log('pipe Operators');
+console.log(4 > 3 || 10 > 5 );
+console.log(4 > 3 || 10 < 5 );
+console.log(4 < 3 || 10 < 5 );
 
 //! Negation examples
+console.log(4>3);
+console.log(!(4>3));
 
-let check6 = 4 > 3                     // true
-let check7 = !(4 > 3)                  //  false
-let isLightOn1 = true
-let isLightOff = !isLightOn           // false
-let isMarried2 = !false                // true
+let isPowerOn = true;
+console.log(!isPowerOn);
